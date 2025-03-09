@@ -1,4 +1,5 @@
 import React, { useState } from "react"; // ✅ Import useState
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import product1 from "../../assets/product-1.png";
@@ -147,13 +148,13 @@ function Cart() {
 
                 <div className="row">
                   <div className="col-md-12  ">
-                  <button
-                    className="btn  py-3 btn-block"
-                    onClick={() => window.location = 'checkout.html'}
-                    style={{ backgroundColor: "#3b5d50", color: "white" }}
-                    >
+                  <Link 
+                    to="/checkout"
+                    className="btn py-3 btn-block"
+                    style={{ backgroundColor: "#3b5d50", color: "white", textDecoration: "none", display: "block", textAlign: "center" }}
+                  >
                     Proceed To Checkout
-                  </button>
+                  </Link>
                   </div>
                 </div>
               </div>
