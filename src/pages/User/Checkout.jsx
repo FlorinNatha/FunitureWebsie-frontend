@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import '../../style/Home.css';
+import { Link } from 'react-router-dom';
+
 
 function Checkout() {
   const [formData, setFormData] = useState({
@@ -149,7 +151,7 @@ function Checkout() {
               </tbody>
             </table>
             <div className="form-group">
-              <button type="submit" className="btn btn-primary w-100">Place Order</button>
+              <Link to="/thankyou"><button type="submit" className="btn btn-primary w-100">Place Order</button></Link>
             </div>
           </form>
         </div>
