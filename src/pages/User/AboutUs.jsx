@@ -10,8 +10,8 @@ import Person2 from "../../assets/person_2.jpg";
 import Person3 from "../../assets/person_3.jpg";
 import Person4 from "../../assets/person_4.jpg";
 import "../../style/Home.css";
+import TestimonialsSection from '../../components/TestimonialsSection';
 
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -46,51 +46,13 @@ function AboutUs() {
         "Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.",
     },
   ];
-
   const teamMembers = [
-    { img: Person1, name: "Lawson Arnold", position: "CEO, Founder, Atty." },
-    { img: Person2, name: "Jeremy Walker", position: "CEO, Founder, Atty." },
-    { img: Person3, name: "Patrik White", position: "CEO, Founder, Atty." },
-    { img: Person4, name: "Kathryn Ryan", position: "CEO, Founder, Atty." },
+    { name: "John Doe", position: "CEO", img: Person1 },
+    { name: "Jane Smith", position: "Marketing Head", img: Person2 },
+    { name: "Alice Brown", position: "Lead Designer", img: Person3 },
+    { name: "Bob Johnson", position: "Developer", img: Person4 },
   ];
-
-  const testimonials = [
-    {
-      quote:
-        "Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit.",
-      name: "Maria Jones",
-      position: "CEO, Co-Founder, XYZ Inc.",
-      img: Person1,
-    },
-    {
-      quote:
-        "Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique senectus et netus.",
-      name: "John Doe",
-      position: "CTO, ABC Ltd.",
-      img: Person1,
-    },
-    {
-      quote:
-        "Integer convallis volutpat dui quis scelerisque. Pellentesque habitant morbi tristique senectus et malesuada fames.",
-      name: "Sarah Smith",
-      position: "Marketing Head, TechCorp",
-      img: Person1,
-    },
-  ];
-
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    arrows: true,
-    prevArrow: <PrevArrow />,
-    nextArrow: <NextArrow />,
-  };
-
+  
   return (
     <div>
       <div className="hero" style={{ backgroundColor: "#1f4d3b"}}>
@@ -207,30 +169,7 @@ function AboutUs() {
         </div>
       </div>
 
-      {/* Testimonials Section */}
-      <div className="testimonial-section">
-        <div className="container">
-          <h2 className="text-center">Testimonials</h2>
-          <Slider {...settings}>
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="testimonial-block text-center">
-                <blockquote className="mb-4">{testimonial.quote}</blockquote>
-                <div className="author-info">
-                  <div className="author-pic">
-                    <img
-                      src={testimonial.img}
-                      alt={testimonial.name}
-                      className="img-fluid"
-                    />
-                  </div>
-                  <h3 className="font-weight-bold">{testimonial.name}</h3>
-                  <span className="position">{testimonial.position}</span>
-                </div>
-              </div>
-            ))}
-          </Slider>
-        </div>
-      </div>
+      <TestimonialsSection/>
     </div>
   );
 }
@@ -241,3 +180,4 @@ const PrevArrow = (props) => <div className="custom-arrow prev-arrow" onClick={p
 const NextArrow = (props) => <div className="custom-arrow next-arrow" onClick={props.onClick}>&#8250;</div>;
 
 export default AboutUs;
+
