@@ -11,6 +11,8 @@ import ContactUs from './pages/User/ContactUs';
 import Cart from './pages/User/Cart';
 import Checkout from './pages/User/Checkout';
 import Thankyou from './pages/User/ThankYou';
+import Login from './pages/User/Login';
+import Register from './pages/User/Register';
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
           <Route path='/cart' element={<Cart/>}></Route>
           <Route path="/checkout" element={<Checkout/>}></Route>
           <Route path='/thankyou' element={<Thankyou/>}></Route>
+          <Route path='/login' element={<Login/>}></Route>
+          <Route path='/register' element={<Register/>}></Route>
         </Routes>
         <FooterSection/>
       </Router>
