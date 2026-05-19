@@ -22,7 +22,7 @@
         font-size: 54px; } }
   .hero p {
     color: rgba(255, 255, 255, 0.5);
-    margin-botom: 30px; }
+    margin-bottom: 30px; }
     
 
 
@@ -148,7 +148,7 @@
         content: "";
         width: 255px;
         height: 217px;
-        background-image: url("../images/dots-yellow.svg");
+        background-image: url("../assets/dots-yellow.svg");
         background-repeat: no-repeat;
         background-size: contain;
         -webkit-transform: translate(-40%, -40%);
